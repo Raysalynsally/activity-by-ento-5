@@ -1,0 +1,95 @@
+ACTIVITY 1 <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 5: DYNAMIC HTML</title>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <h1 id="title">HTML Dynamic</h1>
+    <hr>
+    <a href="https://www.example.com" id="link">Visit Example</a>
+    <img src="one.png" alt="Sample Image" id="image">
+    <button id="btn">Click Me</button>
+    <hr>
+<script type="text/javascript">
+    document.getElementById('btn').addEventListener('click', function() {
+    document.getElementById('title').innerText = 'Welcome Navigator';
+    document.getElementById('link').href = 'https://www.google.com';
+    document.getElementById('link').innerText = 'https://www.w3schools.com/';
+    document.getElementById('image').src = 'img.png';
+    document.getElementById('image').alt = 'img2.png';
+    document.getElementById('btn').innerText = 'Button Clicked';
+});
+</script>
+</body>
+</html>
+
+
+----------------------------------------------------------------------- <br>
+ACTIVITY 2 <br>
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Counter</title>
+</head>
+
+<body>
+    <h1>Counter</h1>
+    <p>The current value is: <span id="counter">0</span></p>
+    <input type="button" id="clickButton" value="Click Counter" /> <br />
+
+    <script type="text/javascript">
+        document.getElementById('clickButton').addEventListener('click', function() {
+            let counterValue = parseInt(document.getElementById('counter').innerText);
+            document.getElementById('counter').innerText = counterValue + 1;
+        });
+    </script>
+</body>
+
+</html>
+
+------------------------------------------------------------------------------------------ <br>
+ACTIVITY 3 <br> <br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Button and textbox</title>
+
+</head>
+<body>
+<input type="text" id="input-text" placeholder="Enter text">
+<button id="change-color">Change Text Color</button>
+<p id="display-text"></p>
+<style type="text/css">
+    body{
+        justify-content: center;
+    }
+    #input-text {
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    #display-text {
+        color: black;
+        font-size: 18px;
+    }
+
+</style>
+
+
+<script type="text/javascript">
+    document.getElementById('change-color').addEventListener('click', function() {
+        var inputText = document.getElementById('input-text').value;
+        document.getElementById('display-text').textContent = inputText;
+        document.getElementById('display-text').style.color = 'red';
+    });
+
+</script>
+</body>
+</html>
